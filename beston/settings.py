@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'web',
+    #'captcha',
 ]
 
 MIDDLEWARE = [
@@ -80,6 +81,17 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+#google recaptcha
+RECAPTCHA_PUBLIC_KEY = '6LdTSdIjAAAAAOaEjRXCl68KF5qMFKaDkJVq4gN1'
+RECAPTCHA_SECRET_KEY = '6LdTSdIjAAAAAOP3Z-PF1GbEt61edqUH4JoG3Cr-'
+
+SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
+
+#sending email using mailtrap
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '8ee3ca7173fbdf'
+EMAIL_HOST_PASSWORD = '10027d11273ab5'
+EMAIL_PORT = '2525'
 
 
 # Password validation
