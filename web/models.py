@@ -28,7 +28,9 @@ class Exopense(models.Model):
     amount = models.BigIntegerField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     def __str__(self):
-        return  '%s' % self.user , self.text, self.amount
+        #return  '%s' % self.user , self.text, self.amount
+        return '{} {} {}'.format(self.user, self.text, self.amount)
+
 
 
 class Income(models.Model):
@@ -37,4 +39,5 @@ class Income(models.Model):
     amount = models.BigIntegerField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     def __str__(self):
-        return  '%s' % self.user , self.text, self.amount
+        #return  '%s' % self.user , self.text, self.amount
+        return '{} {} {}'.format(self.user, self.text, self.amount)

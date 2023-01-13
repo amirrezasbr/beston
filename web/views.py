@@ -66,7 +66,7 @@ def register(request):
                          subject = "فعال سازی اکانت بستون",
                          from_email = "amirreza13.7676@gmail.com",
                          recipient_list = ['email'],
-                         message=  "برای فعال کردن اکانت بستون خود روی لینک روبرو کلیک کنید: http://127.0.0.1:8000//web/register/?email={}&code={}".format(email, code),
+                         message=  "برای فعال کردن اکانت بستون خود روی لینک روبرو کلیک کنید: {}?email={}&code={}".format(request.build_absolute_uri('/web/register/'),email, code),
                                  #tag = "account request"
                          )
                 #message.send()
